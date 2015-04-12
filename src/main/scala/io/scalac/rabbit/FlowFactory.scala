@@ -34,7 +34,7 @@ trait FlowFactory extends LazyLogging {
     map { _.utf8String }.
     
     // do something time consuming
-    mapAsync { DomainService.expensiveCall }.
+    // mapAsync { DomainService.expensiveCall }.
 
     // classify message
     map { DomainService.classify }

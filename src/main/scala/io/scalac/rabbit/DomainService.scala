@@ -5,13 +5,6 @@ import scala.util.Random
 
 import com.typesafe.scalalogging.slf4j.LazyLogging
 
-
-sealed trait CensoredMessage {
-  def message: String
-}
-case class MessageSafe(message: String) extends CensoredMessage
-case class MessageThreat(message: String) extends CensoredMessage
-
 object DomainService extends LazyLogging {
   
   val unsafeWords = Set("terror")
